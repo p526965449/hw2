@@ -81,10 +81,10 @@ Role.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 new_studio = Studio.new
-new_studio["studio_name"] = "WarnerBros ."
+new_studio["studio_name"] = "Warner Bros."
 new_studio.save
 
-WarnerBros = Studio.find_by({ "studio_name" => "WarnerBros ." })
+WarnerBros = Studio.find_by({ "studio_name" => "Warner Bros." })
 
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
@@ -113,6 +113,42 @@ new_actor.save
 
 new_actor = Actor.new
 new_actor["actor_name"] = "Michael Caine"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Liam Neeson "
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Katie Holmes"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Gary Oldman"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Heath Ledger"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Aaron Eckhart"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Maggie Gyllenhaal"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Tom Hardy"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Joseph Gordon-Levitt"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["actor_name"] = "Anne Hathaway"
 new_actor.save
 
 new_role = Role.new
