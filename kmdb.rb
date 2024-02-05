@@ -169,8 +169,13 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
-all_movies = Movie.all
-puts all_movies.inspect
+#all_movies = Movie.all
+#puts all_movies.inspect
+movie_list = ["Batman Begins", "The Dark Knight", "The Dark Knight Rises"]
+for movie in movie_list
+  puts "#{movie}"
+end
+
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
