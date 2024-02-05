@@ -85,38 +85,38 @@ new_studio["studio_name"] = "Warner Bros."
 new_studio.save
 
 new_movie = Movie.new
-new_movie["title"] = ["Batman Begins"]
-new_movie["year_released"] = ["2005"]
-new_movie["rated"] = ["PG-13"]
-new_movie["studio_id"] = [1]
+new_movie["title"] = "Batman Begins"
+new_movie["year_released"] = 2005
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = 1
 new_movie.save
 
 new_movie = Movie.new
-new_movie["title"] = ["The Dark Knight"]
-new_movie["year_released"] = ["2008"]
-new_movie["rated"] = ["PG-13"]
-new_movie["studio_id"] = [1]
+new_movie["title"] = "The Dark Knight"
+new_movie["year_released"] = 2008
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = 1
 new_movie.save
 
 new_movie = Movie.new
-new_movie["title"] = ["The Dark Knight Rises"]
-new_movie["year_released"] = ["2012"]
-new_movie["rated"] = ["PG-13"]
-new_movie["studio_id"] = [1]
+new_movie["title"] = "The Dark Knight Rises"
+new_movie["year_released"] = 2012
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = 1
 new_movie.save
 
 new_actor = Actor.new
-new_actor["actor_name"] = ["Christian Bale"]
+new_actor["actor_name"] = "Christian Bale"
 new_actor.save
 
 new_actor = Actor.new
-new_actor["actor_name"] = ["Michael Caine"]
+new_actor["actor_name"] = "Michael Caine"
 new_actor.save
 
 new_role = Role.new
-new_role["movie_id"] = [1]
-new_role["actor_id"] = [1]
-new_role["character_name"] = ["Bruce Wayne"]
+new_role["movie_id"] = 1
+new_role["actor_id"] = 1
+new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
 # Prints a header for the movies output
