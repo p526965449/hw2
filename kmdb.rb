@@ -151,9 +151,14 @@ new_actor = Actor.new
 new_actor["actor_name"] = "Anne Hathaway"
 new_actor.save
 
+BB = Movie.find_by({ "title" => "Batman Begins" })
+DK = Movie.find_by({ "title" => "The Dark Knight" })
+DKR = Movie.find_by({ "title" => "The Dark Knight Rises" })
+CB = Actor.find_by({ "actor_name" => "Christian Bale" })
+
 new_role = Role.new
-new_role["movie_id"] = 1
-new_role["actor_id"] = 1
+new_role["movie_id"] = BB["id"]
+new_role["actor_id"] = CB["id"]
 new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
