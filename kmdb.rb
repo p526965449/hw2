@@ -81,28 +81,30 @@ Role.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 new_studio = Studio.new
-new_studio["studio_name"] = "Warner Bros."
+new_studio["studio_name"] = "WarnerBros ."
 new_studio.save
+
+WarnerBros = Studio.find_by({ "studio_name" => "WarnerBros ." })
 
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = 2005
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = 1
+new_movie["studio_id"] = WarnerBros["id"]
 new_movie.save
 
 new_movie = Movie.new
 new_movie["title"] = "The Dark Knight"
 new_movie["year_released"] = 2008
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = 1
+new_movie["studio_id"] = WarnerBros["id"]
 new_movie.save
 
 new_movie = Movie.new
 new_movie["title"] = "The Dark Knight Rises"
 new_movie["year_released"] = 2012
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = 1
+new_movie["studio_id"] = WarnerBros["id"]
 new_movie.save
 
 new_actor = Actor.new
@@ -126,7 +128,8 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
-
+all_movies = Movie.all
+puts all_movies.inspect
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
