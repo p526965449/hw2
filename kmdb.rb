@@ -172,8 +172,10 @@ puts ""
 #all_movies = Movie.all
 #puts all_movies.inspect
 movie_list = ["Batman Begins", "The Dark Knight", "The Dark Knight Rises"]
+rated = "PG-13"
+year = ["2003", "2005", "2012"]
 for movie in movie_list
-  puts "#{movie}"
+  puts "#{movie} #{rated} #{year}"
 end
 
 # Prints a header for the cast output
