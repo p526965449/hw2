@@ -107,6 +107,8 @@ new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = WarnerBros["id"]
 new_movie.save
 
+puts "There are #{Movie.all.count} movies"
+
 new_actor = Actor.new
 new_actor["actor_name"] = "Christian Bale"
 new_actor.save
@@ -172,6 +174,7 @@ puts ""
 #all_movies = Movie.all
 #puts all_movies.inspect
 movie_list = ["Batman Begins", "The Dark Knight", "The Dark Knight Rises"]
+#movie_list = Movie.all
 #rated = "PG-13"
 #year = ["2003", "2005", "2012"]
 movie1 = new_movie ["title"]
