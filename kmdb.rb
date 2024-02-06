@@ -82,6 +82,7 @@ Role.destroy_all
 # TODO!
 new_studio = Studio.new
 new_studio["studio_name"] = "Warner Bros."
+puts new_studio["studio_name"]
 new_studio.save
 
 WarnerBros = Studio.find_by({ "studio_name" => "Warner Bros." })
@@ -93,19 +94,19 @@ new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = WarnerBros["id"]
 new_movie.save
 
-new_movie = Movie.new
-new_movie["title"] = "The Dark Knight"
-new_movie["year_released"] = 2008
-new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = WarnerBros["id"]
-new_movie.save
+new_movie1 = Movie.new
+new_movie1["title"] = "The Dark Knight"
+new_movie1["year_released"] = 2008
+new_movie1["rated"] = "PG-13"
+new_movie1["studio_id"] = WarnerBros["id"]
+new_movie1.save
 
-new_movie = Movie.new
-new_movie["title"] = "The Dark Knight Rises"
-new_movie["year_released"] = 2012
-new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = WarnerBros["id"]
-new_movie.save
+new_movie2 = Movie.new
+new_movie2["title"] = "The Dark Knight Rises"
+new_movie2["year_released"] = 2012
+new_movie2["rated"] = "PG-13"
+new_movie2["studio_id"] = WarnerBros["id"]
+new_movie2.save
 
 puts "There are #{Movie.all.count} movies"
 
