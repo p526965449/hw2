@@ -82,10 +82,11 @@ Role.destroy_all
 # TODO!
 new_studio = Studio.new
 new_studio["studio_name"] = "Warner Bros."
-puts new_studio["studio_name"]
+#puts new_studio["studio_name"]
 new_studio.save
 
 WarnerBros = Studio.find_by({ "studio_name" => "Warner Bros." })
+#puts WarnerBros.inspect
 
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
@@ -108,7 +109,7 @@ new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = WarnerBros["id"]
 new_movie.save
 
-puts "There are #{Movie.all.count} movies"
+#puts "There are #{Movie.all.count} movies"
 
 new_actor = Actor.new
 new_actor["actor_name"] = "Christian Bale"
@@ -154,16 +155,28 @@ new_actor = Actor.new
 new_actor["actor_name"] = "Anne Hathaway"
 new_actor.save
 
-# BB = Movie.find_by({ "title" => "Batman Begins" })
-# DK = Movie.find_by({ "title" => "The Dark Knight" })
-# DKR = Movie.find_by({ "title" => "The Dark Knight Rises" })
-# CB = Actor.find_by({ "actor_name" => "Christian Bale" })
+BatmanBegins = Movie.find_by({ "title" => "Batman Begins" })
+TheDarkKnight = Movie.find_by({ "title" => "The Dark Knight" })
+TheDarkKnightRises = Movie.find_by({ "title" => "The Dark Knight Rises" })
+ChristianBale = Actor.find_by({"actor_name" => "Christian Bale"})
+MichaelCaine = Actor.find_by({"actor_name" => "Michael Caine"})
+LiamNeeson = Actor.find_by({"actor_name" => "Liam Neeson"})
+KatieHolmes = Actor.find_by({"actor_name" => "Katie Holmes"})
+GaryOldman = Actor.find_by({"actor_name" => "Gary Oldman"})
+HeathLedger = Actor.find_by({"actor_name" => "Heath Ledger"})
+AaronEckhart = Actor.find_by({"actor_name" => "Aaron Eckhart"})
+MaggieGyllenhaal = Actor.find_by({"actor_name" => "Maggie Gyllenhaal"})
+TomHardy = Actor.find_by({"actor_name" => "Tom Hardy"})
+JosephGordonLevitt = Actor.find_by({"actor_name" => "Joseph Gordon-Levitt"})
+AnneHathaway = Actor.find_by({"actor_name" => "Anne Hathaway"})
 
-# new_role = Role.new
-# new_role["movie_id"] = BB["id"]
-# new_role["actor_id"] = CB["id"]
-# new_role["character_name"] = "Bruce Wayne"
-# new_role.save
+new_role = Role.new
+new_role["movie_id"] = BatmanBegins["id"]
+new_role["actor_id"] = ChristianBale["id"]
+new_role["character_name"] = "Bruce Wayne"
+#t.string "character_name"
+new_role.save
+
 
 # Prints a header for the movies output
 puts "Movies"
@@ -173,10 +186,13 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 movie_list = Movie.all
+#studio_list = Studio.all
+#activities = Activity.where({"salesperson_id" => WarnerBros["id"]
 for movie in movie_list
   movie_name = movie["title"]
   movie_rating = movie["rated"]
   movie_year = movie["year_released"]
+  #movie_studio = Studio["name"] WHERE movie_id = studio
   puts "#{movie_name} #{movie_rating} #{movie_year}"
 end
 
