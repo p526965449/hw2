@@ -276,7 +276,7 @@ for movie in movie_list
   movie_rating = movie["rated"]
   movie_year = movie["year_released"]
   studio_name = Studio.find_by "id" => movie["studio_id"]
-  puts "#{movie_name} #{movie_rating} #{movie_year} #{studio_name["studio_name"]}"
+  puts "#{movie_name} #{movie_year} #{movie_rating} #{studio_name["studio_name"]}"
 end
 
 # Prints a header for the cast output
