@@ -154,10 +154,10 @@ new_actor = Actor.new
 new_actor["actor_name"] = "Anne Hathaway"
 new_actor.save
 
-BB = Movie.find_by({ "title" => "Batman Begins" })
-DK = Movie.find_by({ "title" => "The Dark Knight" })
-DKR = Movie.find_by({ "title" => "The Dark Knight Rises" })
-CB = Actor.find_by({ "actor_name" => "Christian Bale" })
+# BB = Movie.find_by({ "title" => "Batman Begins" })
+# DK = Movie.find_by({ "title" => "The Dark Knight" })
+# DKR = Movie.find_by({ "title" => "The Dark Knight Rises" })
+# CB = Actor.find_by({ "actor_name" => "Christian Bale" })
 
 new_role = Role.new
 new_role["movie_id"] = BB["id"]
@@ -172,19 +172,12 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
-#all_movies = Movie.all
-#puts all_movies.inspect
-movie_list = ["Batman Begins", "The Dark Knight", "The Dark Knight Rises"]
-#movie_list = Movie.all
-#rated = "PG-13"
-#year = ["2003", "2005", "2012"]
-movie1 = new_movie ["title"]
-year1 = new_movie["year_released"]
-rated1 = new_movie["rated"]
-studio1 = new_studio["studio_name"] 
-##rated1 = contact["last_name"]
+movie_list = Movie.all
 for movie in movie_list
-  puts "#{movie1} #{year1} #{rated1} #{studio1}"
+  movie_name = movie["title"]
+  movie_rating = movie["rated"]
+  movie_year = movie["year_released"]
+  puts "#{movie_name} #{movie_rating} #{movie_year}"
 end
 
 # Prints a header for the cast output
