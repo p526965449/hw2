@@ -287,3 +287,10 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+role_list = Role.all
+for role in role_list
+  #movie_title = Movie["id"] => role["movie_id"]
+  character_name = role["character_name"]
+  puts"#{character_name}"
+
+end
