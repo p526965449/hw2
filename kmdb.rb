@@ -82,11 +82,9 @@ Role.destroy_all
 # TODO!
 new_studio = Studio.new
 new_studio["studio_name"] = "Warner Bros."
-#puts new_studio["studio_name"]
 new_studio.save
 
 Warner_Bros = Studio.find_by({ "studio_name" => "Warner Bros." })
-#puts WarnerBros.inspect
 
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
@@ -108,8 +106,6 @@ new_movie["year_released"] = 2012
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = Warner_Bros["id"]
 new_movie.save
-
-#puts "There are #{Movie.all.count} movies"
 
 new_actor = Actor.new
 new_actor["actor_name"] = "Christian Bale"
@@ -269,14 +265,13 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 movie_list = Movie.all
-#studio_list = Studio.all
-#activities = Activity.where({"salesperson_id" => WarnerBros["id"]
 for movie in movie_list
   movie_name = movie["title"]
   movie_rating = movie["rated"]
   movie_year = movie["year_released"]
-  studio_name = Studio.find_by "id" => movie["studio_id"]
-  puts "#{movie_name} #{movie_year} #{movie_rating} #{studio_name["studio_name"]}"
+  studio_name_store = Studio.find_by "id" => movie["studio_id"]
+  studio_name = studio_name_store["studio_name"]
+  puts "#{movie_name} #{movie_year} #{movie_rating} #{studio_name}"
 end
 
 # Prints a header for the cast output
@@ -289,9 +284,11 @@ puts ""
 # TODO!
 role_list = Role.all
 for role in role_list
-  movie_title = Movie.find_by "id" => role["movie_id"]
-  actor_title = Actor.find_by "id" => role["actor_id"]
+  movie_title_store = Movie.find_by "id" => role["movie_id"]
+  movie_title = movie_title_store["title"]
+  actor_title_store = Actor.find_by "id" => role["actor_id"]
+  actor_title = actor_title_store ["actor_name"]
   character_name = role["character_name"]
-  puts"#{movie_title["title"]} #{actor_title["actor_name"]} #{character_name}"
+  puts"#{movie_title} #{actor_title} #{character_name}"
 
 end
