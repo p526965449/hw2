@@ -225,6 +225,13 @@ new_role["character_name"] = "Alfred"
 new_role.save
 
 new_role = Role.new
+new_role["movie_id"] = The_Dark_Knight["id"]
+new_role["actor_id"] =  Maggie_Gyllenhaal["id"]
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+
+new_role = Role.new
 new_role["movie_id"] = The_Dark_Knight_Rises["id"]
 new_role["actor_id"] = Christian_Bale["id"]
 new_role["character_name"] = "Bruce Wayne"
