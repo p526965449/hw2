@@ -120,7 +120,7 @@ new_actor["actor_name"] = "Michael Caine"
 new_actor.save
 
 new_actor = Actor.new
-new_actor["actor_name"] = "Liam Neeson "
+new_actor["actor_name"] = "Liam Neeson"
 new_actor.save
 
 new_actor = Actor.new
@@ -222,12 +222,6 @@ new_role = Role.new
 new_role["movie_id"] = The_Dark_Knight["id"]
 new_role["actor_id"] =  Michael_Caine["id"]
 new_role["character_name"] = "Alfred"
-new_role.save
-
-new_role = Role.new
-new_role["movie_id"] = The_Dark_Knight["id"]
-new_role["actor_id"] = Maggie_Gyllenhaal ["id"]
-new_role["character_name"] = "Rachel Dawes"
 new_role.save
 
 new_role = Role.new
