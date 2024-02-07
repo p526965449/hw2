@@ -289,8 +289,9 @@ puts ""
 # TODO!
 role_list = Role.all
 for role in role_list
-  #movie_title = Movie["id"] => role["movie_id"]
+  movie_title = Movie.find_by "id" => role["movie_id"]
+  actor_title = Actor.find_by "id" => role["actor_id"]
   character_name = role["character_name"]
-  puts"#{character_name}"
+  puts"#{movie_title["title"]} #{actor_title["actor_name"]} #{character_name}"
 
 end
