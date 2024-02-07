@@ -159,11 +159,11 @@ new_actor.save
 # DKR = Movie.find_by({ "title" => "The Dark Knight Rises" })
 # CB = Actor.find_by({ "actor_name" => "Christian Bale" })
 
-new_role = Role.new
-new_role["movie_id"] = BB["id"]
-new_role["actor_id"] = CB["id"]
-new_role["character_name"] = "Bruce Wayne"
-new_role.save
+# new_role = Role.new
+# new_role["movie_id"] = BB["id"]
+# new_role["actor_id"] = CB["id"]
+# new_role["character_name"] = "Bruce Wayne"
+# new_role.save
 
 # Prints a header for the movies output
 puts "Movies"
